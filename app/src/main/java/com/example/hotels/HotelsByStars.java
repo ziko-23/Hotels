@@ -25,21 +25,9 @@ public class HotelsByStars extends AppCompatActivity {
         layoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(layoutManager);
         Intent intent = getIntent();
-//        switch (intent.getStringExtra("nbrStars")) {
-//            case "1":
-//        double n = (/)intent.getStringExtra("");
-                data = getHotelsByStars(Double.valueOf(intent.getStringExtra("nbrStars")));
-                System.out.println(data);
-                mAdapter = new CustomRecyclerAdapter(this, data);
-                recyclerView.setAdapter(mAdapter);
-//                break;
-//            case "2":
-//                data = getHotelsByStars(Double.valueOf(intent.getStringExtra("nbrStars")));
-//                System.out.println(data);
-//                mAdapter = new CustomRecyclerAdapter(this, data);
-//                recyclerView.setAdapter(mAdapter);
-//                break;
-//        }
+        data = getHotelsByStars(Double.valueOf(intent.getStringExtra("nbrStars")));
+        mAdapter = new CustomRecyclerAdapter(this, data);
+        recyclerView.setAdapter(mAdapter);
     }
 
     public List<Hotel> getHotelsByStars(double nbStarts) {

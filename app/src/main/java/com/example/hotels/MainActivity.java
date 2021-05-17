@@ -110,7 +110,6 @@ public class MainActivity extends AppCompatActivity {
                 if (event.getAction() == MotionEvent.ACTION_UP) {
                     Intent intent = new Intent(MainActivity.this, HotelsByStars.class);
                     intent.putExtra("nbrStars","5");
-
                     startActivity(intent);
 
                 }
@@ -123,10 +122,4 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-
-    public List<Hotel> getHotelsByStars(double nbStarts) {
-        List<Hotel> list = new ArrayList<>();
-        list.addAll(realm.where(Hotel.class).equalTo("nbStars", nbStarts).findAll());
-        return list;
-    }
 }

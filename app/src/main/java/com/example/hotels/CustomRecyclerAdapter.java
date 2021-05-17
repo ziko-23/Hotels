@@ -52,16 +52,6 @@ public class CustomRecyclerAdapter extends RecyclerView.Adapter<CustomRecyclerAd
             super(itemView);
             txtName = (TextView) itemView.findViewById(R.id.txtName);
             txtnbrStars = (TextView) itemView.findViewById(R.id.txtnbrStars);
-//            itemView.setOnClickListener(v -> {
-//                Hotel cpu = (Hotel) v.getTag();
-//                Intent send = new Intent(context, SingleProduct.class);
-//                send.putExtra("id", cpu.getId());
-//                send.putExtra("name", cpu.getName());
-//                send.putExtra("action", "update-delete");
-//                context.startActivity(send);
-//                Toast.makeText(v.getContext(), cpu.getId() + " is " + cpu.getSpecies(), Toast.LENGTH_SHORT).show();
-//            });
-
         }
     }
 }
